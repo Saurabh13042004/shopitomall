@@ -1,25 +1,24 @@
-import { Toaster } from 'react-hot-toast';
-import { Logo } from './components/Logo';
-import { HeroSection } from './components/HeroSection';
-import { Footer } from './components/Footer';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import { AdminLayout } from './components/AdminLayout';
+import { Dashboard } from './pages/Dashboard';
+import { ResponsesPage } from './pages/ResponsesPage';
+
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Toaster position="top-right" />
-      
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 shadow-sm py-4">
-        <div className="container mx-auto px-4">
-          <Logo />
-        </div>
-      </header>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="responses" element={<ResponsesPage />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
 
-      <main>
-        <HeroSection />
-      </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }
 
