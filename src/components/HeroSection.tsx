@@ -7,7 +7,7 @@ export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="relative min-h-screen bg-cover bg-center"   style={{ backgroundImage: "url('/bg_france.jpg')" }}>
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 " />
       
       <div className="relative pt-32 pb-20 px-4 container mx-auto">
         <motion.div
