@@ -33,6 +33,9 @@ export function HeroSection() {
             className="bg-white/95 p-8 rounded-lg shadow-xl"
           >
             <h2 className="text-2xl font-bold mb-6">Register Now</h2>
+            <p className="text-gray-700 mb-6">
+              Please fill out following form to register your intrest and enter our Cybertruck giveaway!
+            </p>
             <GiveawayForm />
           </motion.div>
 
