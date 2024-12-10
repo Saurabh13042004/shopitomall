@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import { AdminLayout } from './components/AdminLayout';
 import { Dashboard } from './pages/Dashboard';
 import { ResponsesPage } from './pages/ResponsesPage';
+import LoginPage from './pages/LoginPage.tsx';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="responses" element={<ResponsesPage />} />
         </Route>
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       </BrowserRouter>
 
