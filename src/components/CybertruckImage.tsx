@@ -6,28 +6,20 @@ export function CybertruckImage() {
 
   return (
     <motion.div
-      className="relative w-full max-w-2xl mx-auto"
+      className="w-full flex justify-end mt-8" // Ensure the image is aligned to the right with margin
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: 50 }} // Slide in from the right
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
     >
       <img
         src={isHovered 
-          ? "./image_hovered.jpg"
-          : "./image.jpg"}
+          ? "./image_hovered.png"
+          : "./image_hovered.png"}
         alt="Tesla Cybertruck"
-        className="w-full h-auto rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
+        className="w-2/3 md:w-1/2 lg:w-1/3 h-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
       />
-      {isHovered && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        >
-        </motion.div>
-      )}
     </motion.div>
   );
 }

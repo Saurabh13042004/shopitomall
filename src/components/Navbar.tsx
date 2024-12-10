@@ -32,7 +32,7 @@ export function Navbar({ onOpenGiveaway }: NavbarProps) {
             ? 'bg-transparent'
             : 'lg:bg-white/80 lg:dark:bg-gray-900/80 lg:backdrop-blur-sm lg:mt-8 lg:rounded-md lg:shadow-lg'
         }`}>
-          <div className="flex-shrink-0">
+          <div className="flex-grow flex justify-center">
             <a href="#" className="flex items-center space-x-2">
               <img src="/logo.png" alt="Logo" className="w-28 h-10 lg:w-36 lg:h-12" />
               {/* <ShoppingBag className="w-8 h-8 lg:h-10 lg:w-10 text-red-500" /> */}
@@ -47,8 +47,8 @@ export function Navbar({ onOpenGiveaway }: NavbarProps) {
           </div>
 
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Button 
+           {/* <ThemeToggle />*/}
+          {/*   <Button 
               variant="default" 
               onClick={onOpenGiveaway}
               size="lg"
@@ -56,13 +56,14 @@ export function Navbar({ onOpenGiveaway }: NavbarProps) {
             >
               Win Cybertruck
             </Button>
-            <Button 
+            */}
+           {/* <Button 
               variant="default" 
               onClick={onOpenGiveaway}
               className="sm:hidden"
             >
               Win
-            </Button>
+            </Button>*/}
           </div>
         </nav>
       </div>
