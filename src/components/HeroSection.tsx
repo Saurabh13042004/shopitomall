@@ -44,7 +44,7 @@ export function HeroSection() {
             onMouseLeave={() => setIsHovered(false)}
           >
             <img
-                src={isHovered ? "./image_hovered.png" : "./image.png"}
+                src="./image_hovered.png"
                 alt="Tesla Cybertruck"
                 className="w-full h-auto rounded-lg shadow-2xl transition-all duration-300"
             />
