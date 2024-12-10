@@ -6,7 +6,7 @@ import { useState } from "react";
 export function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="relative min-h-screen bg-[url('./bg-france.jpg')] bg-cover bg-center">
+    <div className="relative min-h-screen bg-[url('./bg_france.jpg')] bg-cover bg-center">
       <div className="absolute inset-0 bg-black/60" />
       
       <div className="relative pt-32 pb-20 px-4 container mx-auto">
